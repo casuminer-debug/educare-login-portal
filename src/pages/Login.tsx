@@ -23,7 +23,7 @@ const Login = () => {
         <div className="absolute inset-0 bg-black/20" />
         <img
           src={heroImage}
-          alt="Estudantes e professores colaborando"
+          alt="Estudantes africanos e professor em sala de aula ao ar livre"
           className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
         />
         <div className="relative z-10 text-white text-center max-w-md">
