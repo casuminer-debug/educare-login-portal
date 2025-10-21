@@ -28,7 +28,7 @@ const Login = () => {
         />
         <div className="relative z-10 text-white text-center max-w-md">
           <div className="mb-8">
-            <h1 className="text-5xl font-bold mb-2">Educare</h1>
+            <h1 className="text-5xl font-bold mb-2">Educar</h1>
             <div className="h-1 w-20 bg-white/80 mx-auto rounded-full" />
           </div>
           <p className="text-xl font-light leading-relaxed">
@@ -42,7 +42,7 @@ const Login = () => {
         <div className="w-full max-w-md space-y-8">
           {/* Mobile Logo */}
           <div className="lg:hidden text-center mb-8">
-            <h1 className="text-4xl font-bold text-primary mb-2">Educare</h1>
+            <h1 className="text-4xl font-bold text-primary mb-2">Educar</h1>
             <p className="text-muted-foreground">Bem-vindo de volta</p>
           </div>
 
