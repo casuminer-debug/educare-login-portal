@@ -26,8 +26,8 @@ All colors MUST be HSL.
     --secondary: 172 80% 38%;
     --secondary-foreground: 0 0% 100%;
     
-    /* Photo Overlay Blue - #4D5985 */
-    --overlay: 225 27% 41%;
+    /* Photo Overlay Blue - #4E5B89 */
+    --overlay: 228 30% 43%;
 
     --muted: 210 15% 92%;
     --muted-foreground: 215 15% 45%;
@@ -48,7 +48,7 @@ All colors MUST be HSL.
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(172, 80%, 38%) 0%, hsl(200, 100%, 31%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(25, 95%, 55%) 0%, hsl(35, 95%, 60%) 100%);
-    --gradient-overlay: linear-gradient(135deg, hsla(225, 27%, 41%, 0.7) 0%, hsla(225, 27%, 41%, 0.5) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(228, 30%, 43%, 0.6) 0%, hsla(228, 30%, 43%, 0.8) 100%);
     
     /* Shadows */
     --shadow-soft: 0 2px 8px hsl(215 25% 15% / 0.08);

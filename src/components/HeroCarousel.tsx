@@ -68,19 +68,16 @@ export const HeroCarousel = () => {
                   alt={`Cenário educacional ${index + 1}`}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="relative z-10 flex flex-col items-center justify-center h-full p-12 text-center">
-                  <div className="max-w-2xl space-y-6">
-                    <div className="text-secondary text-8xl font-serif leading-none">
-                      "
-                    </div>
-                    <p className="text-white text-2xl font-light leading-relaxed -mt-16">
-                      {slide.quote}
-                    </p>
-                    <div className="text-secondary text-8xl font-serif leading-none rotate-180 -mt-8">
-                      "
+                <div className="relative z-10 flex items-end justify-start h-full p-8 pb-20">
+                  <div className="max-w-xl space-y-2">
+                    <div className="flex items-start gap-1">
+                      <span className="text-secondary text-5xl font-serif leading-none">"</span>
+                      <p className="text-white text-lg font-light leading-relaxed pt-2">
+                        {slide.quote}
+                      </p>
                     </div>
                     {slide.author && (
-                      <p className="text-white/80 text-lg font-medium -mt-12">
+                      <p className="text-white/90 text-sm font-medium pl-8">
                         — {slide.author}
                       </p>
                     )}
