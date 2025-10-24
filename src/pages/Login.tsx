@@ -5,30 +5,22 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import heroImage from "@/assets/hero-static.png";
 import logoEducar from "@/assets/logo-educar.png";
-
 const Login = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Navigate to institution selection after login
     navigate("/select-institution");
   };
-
-  return (
-    <div className="flex min-h-screen">
+  return <div className="flex min-h-screen">
       {/* Hero Section - Left Side */}
       <div className="hidden lg:flex lg:w-1/2 relative items-center justify-center p-12">
         <div className="absolute inset-0 gradient-overlay" />
-        <img
-          src={heroImage}
-          alt="Jovens africanos com tablets em ambiente educacional"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="relative z-10 text-white text-center max-w-md">
-          <p className="text-xl font-light leading-relaxed">
+        <img src={heroImage} alt="Jovens africanos com tablets em ambiente educacional" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="relative z-10 text-white text-center max-w-md rounded-sm mx-0 px-0 py-[12px]">
+          <p className="text-xl leading-relaxed font-medium">
             Conectando escolas, professores, alunos e responsáveis em uma única plataforma
           </p>
         </div>
@@ -39,11 +31,7 @@ const Login = () => {
         <div className="w-full max-w-md space-y-8">
           {/* Logo and Welcome */}
           <div className="text-center space-y-4">
-            <img
-              src={logoEducar}
-              alt="Logo Educar"
-              className="h-16 mx-auto"
-            />
+            <img src={logoEducar} alt="Logo Educar" className="h-16 mx-auto" />
             <div className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-md">
               <h1 className="text-lg font-medium">Bem vindo ao Educar</h1>
             </div>
@@ -56,47 +44,24 @@ const Login = () => {
                 <Label htmlFor="username" className="text-foreground font-medium">
                   Usuário
                 </Label>
-                <Input
-                  id="username"
-                  type="text"
-                  placeholder="Digite seu usuário"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  required
-                  className="h-12 bg-card border-border focus:border-primary transition-base"
-                />
+                <Input id="username" type="text" placeholder="Digite seu usuário" value={username} onChange={e => setUsername(e.target.value)} required className="h-12 bg-card border-border focus:border-primary transition-base" />
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="password" className="text-foreground font-medium">
                   Senha
                 </Label>
-                <Input
-                  id="password"
-                  type="password"
-                  placeholder="Digite sua senha"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                  className="h-12 bg-card border-border focus:border-primary transition-base"
-                />
+                <Input id="password" type="password" placeholder="Digite sua senha" value={password} onChange={e => setPassword(e.target.value)} required className="h-12 bg-card border-border focus:border-primary transition-base" />
               </div>
             </div>
 
             <div className="flex items-center justify-end">
-              <a
-                href="#"
-                className="text-sm text-primary hover:text-primary-light transition-base font-medium"
-              >
+              <a href="#" className="text-sm text-primary hover:text-primary-light transition-base font-medium">
                 Esqueceu sua conta?
               </a>
             </div>
 
-            <Button
-              type="submit"
-              className="w-full h-12 text-base font-semibold shadow-medium hover:shadow-soft bg-secondary hover:bg-secondary/90 text-secondary-foreground"
-              size="lg"
-            >
+            <Button type="submit" className="w-full h-12 text-base font-semibold shadow-medium hover:shadow-soft bg-secondary hover:bg-secondary/90 text-secondary-foreground" size="lg">
               Entrar
             </Button>
           </form>
@@ -112,8 +77,6 @@ const Login = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Login;
