@@ -36,7 +36,7 @@ const SelectInstitution = () => {
   return (
     <div className="flex min-h-screen">
       {/* Hero Carousel - Left Side */}
-      <div className="hidden lg:flex lg:w-1/2 relative">
+      <div className="hidden lg:flex lg:w-1/2 relative min-h-screen">
         <HeroCarousel />
       </div>
 
