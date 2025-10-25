@@ -60,14 +60,14 @@ export const HeroCarousel = () => {
       <Carousel setApi={setApi} className="w-full h-full">
         <CarouselContent className="h-full">
           {slides.map((slide, index) => (
-            <CarouselItem key={index} className="relative h-full">
+            <CarouselItem key={index} className="relative h-screen lg:h-full">
               <div className="relative w-full h-full">
-                <div className="absolute inset-0 gradient-overlay" />
                 <img
                   src={slide.image}
                   alt={`Cenário educacional ${index + 1}`}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 gradient-overlay" />
                 <div className="relative z-10 flex items-end justify-start h-full p-8 pb-20">
                   <div className="max-w-xl space-y-2">
                     <div className="flex items-start gap-1">

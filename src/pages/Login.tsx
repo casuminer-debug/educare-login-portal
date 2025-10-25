@@ -16,9 +16,9 @@ const Login = () => {
   };
   return <div className="flex min-h-screen">
       {/* Hero Section - Left Side */}
-      <div className="hidden lg:flex lg:w-1/2 relative items-center justify-center p-12">
-        <div className="absolute inset-0 gradient-overlay" />
+      <div className="hidden lg:flex lg:w-1/2 relative">
         <img src={heroImage} alt="Jovens africanos com tablets em ambiente educacional" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 gradient-overlay" />
         <div className="relative z-10 flex items-end justify-start h-full p-8 pb-12">
           <p className="text-white text-lg leading-relaxed font-light max-w-xl">
             Conectando escolas, professores, alunos e responsáveis em uma única plataforma.
