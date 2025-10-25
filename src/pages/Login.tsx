@@ -11,17 +11,17 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Navigate to institution selection after login
-    navigate("/select-institution");
+    // Navigate to institution selection after login with username
+    navigate("/select-institution", { state: { username } });
   };
   return <div className="flex min-h-screen">
       {/* Hero Section - Left Side */}
       <div className="hidden lg:flex lg:w-1/2 relative items-center justify-center p-12">
         <div className="absolute inset-0 gradient-overlay" />
         <img src={heroImage} alt="Jovens africanos com tablets em ambiente educacional" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="relative z-10 text-white text-center max-w-md rounded-sm mx-0 px-0 py-[12px]">
-          <p className="text-xl leading-relaxed font-medium">
-            Conectando escolas, professores, alunos e responsáveis em uma única plataforma
+        <div className="relative z-10 flex items-end justify-start h-full p-8 pb-12">
+          <p className="text-white text-lg leading-relaxed font-light max-w-xl">
+            Conectando escolas, professores, alunos e responsáveis em uma única plataforma.
           </p>
         </div>
       </div>
@@ -31,10 +31,8 @@ const Login = () => {
         <div className="w-full max-w-md space-y-8">
           {/* Logo and Welcome */}
           <div className="text-center space-y-4">
-            <img src={logoEducar} alt="Logo Educar" className="h-16 mx-auto" />
-            <div className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-md">
-              <h1 className="text-lg font-medium">Bem vindo ao Educar</h1>
-            </div>
+            <img src={logoEducar} alt="Logo Educar" className="h-24 mx-auto" />
+            <h1 className="text-xl font-medium text-primary">Bem vindo ao Educar</h1>
           </div>
 
           {/* Login Form */}
@@ -56,7 +54,12 @@ const Login = () => {
             </div>
 
             <div className="flex items-center justify-end">
-              <a href="#" className="text-sm text-primary hover:text-primary-light transition-base font-medium">
+              <a 
+                href="https://wa.me/5531732750094?text=Olá,%20esqueci%20minha%20conta%20e%20preciso%20de%20ajuda" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-primary hover:text-primary-light transition-base font-medium"
+              >
                 Esqueceu sua conta?
               </a>
             </div>
@@ -70,7 +73,12 @@ const Login = () => {
           <div className="text-center pt-6 border-t border-border">
             <p className="text-sm text-muted-foreground">
               Não tem uma conta?{" "}
-              <a href="#" className="text-primary hover:text-primary-light font-medium transition-base">
+              <a 
+                href="https://wa.me/5531732750094?text=Olá,%20não%20tenho%20conta%20e%20preciso%20entrar%20em%20contato%20com%20minha%20instituição" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary-light font-medium transition-base"
+              >
                 Entre em contato com sua instituição
               </a>
             </p>

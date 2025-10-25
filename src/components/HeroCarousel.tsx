@@ -17,13 +17,13 @@ const slides = [
   },
   {
     image: slide2,
-    quote: "Educar não é encher um balde, mas acender um fogo.",
-    author: "William Butler Yeats"
+    quote: "A função da educação é ensinar a pensar intensamente e a pensar criticamente.",
+    author: "Martin Luther King Jr."
   },
   {
     image: slide3,
-    quote: "A educação é o passaporte para o futuro, pois o amanhã pertence àqueles que se preparam hoje.",
-    author: "Malcolm X"
+    quote: "A educação é a chave para desbloquear o mundo, um passaporte para a liberdade.",
+    author: "Oprah Winfrey"
   }
 ];
 

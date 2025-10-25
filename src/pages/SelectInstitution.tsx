@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import {
@@ -13,6 +14,8 @@ import logoEducar from "@/assets/logo-educar.png";
 import { HeroCarousel } from "@/components/HeroCarousel";
 
 const SelectInstitution = () => {
+  const location = useLocation();
+  const username = location.state?.username || "Usuário";
   const [institution, setInstitution] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -45,11 +48,9 @@ const SelectInstitution = () => {
             <img
               src={logoEducar}
               alt="Logo Educar"
-              className="h-16 mx-auto"
+              className="h-24 mx-auto"
             />
-            <div className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-md">
-              <h1 className="text-lg font-medium">Bem vindo João Silva</h1>
-            </div>
+            <h1 className="text-xl font-medium text-primary">Bem vindo {username}</h1>
           </div>
 
           {/* Icon and Header */}
@@ -90,7 +91,15 @@ const SelectInstitution = () => {
                 </SelectContent>
               </Select>
               <p className="text-xs text-muted-foreground">
-                Não encontra sua instituição? Entre em contato com o suporte.
+                Não encontra sua instituição?{" "}
+                <a 
+                  href="https://wa.me/5531732750094?text=Olá,%20não%20encontro%20minha%20instituição%20e%20preciso%20de%20suporte" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary-light font-medium transition-base"
+                >
+                  Entre em contato com o suporte
+                </a>.
               </p>
             </div>
 
